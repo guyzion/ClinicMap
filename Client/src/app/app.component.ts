@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { tileLayer, latLng, circle, polygon, marker, icon, layerGroup, Map } from 'leaflet';
+import { tileLayer, latLng, circle, polygon, marker, icon, layerGroup, Map, control } from 'leaflet';
 import 'leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/images/marker-icon.png';
 import { ClinicsService } from './clinics.service';
@@ -42,8 +42,9 @@ export class AppComponent {
            iconUrl: 'assets/'+clinic.HealthMedicalCenterName+'-'+clinic.ClinicStatus+'.png',
            popupAnchor: [0, -40]
         })
-      }).bindPopup(`<div style='font-size: 14px; text-align: center;'><h1> קופת חולים ${clinic.HealthMedicalCenterName} </h1> ${clinic.CityName}, ${clinic.StreetName} <div>`).addTo(this.overlayGroup);
-
+      }).bindPopup(`<div style='font-size: 14px; text-align: center;'>
+        <h1> קופת חולים ${clinic.HealthMedicalCenterName} </h1> ${clinic.CityName}, ${clinic.StreetName} <div>`)
+        .addTo(this.overlayGroup);
     });
   }
 }
