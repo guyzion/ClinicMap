@@ -1,10 +1,9 @@
-{
-  [
+[
     {
         "NumAVi": 944,
         "Emer_Dept_hmo_GK": 2358287,
         "LastUpdateDate": "16/12/2019, 8:05",
-        "IsLastInput": "0",
+        "IsLastInput": 0,
         "ClinicStatus": "סגור",
         "CityCode": 3000,
         "CityName": "ירושלים",
@@ -21,8 +20,8 @@
         "ClinicCode": "",
         "HealthMedicalCenterName": "מאוחדת",
         "ClinicName": "",
-        "NorthernBorderDistance": "number",
-        "GazaBorderDistance": "number",
+        "NorthernBorderDistance": 0,
+        "GazaBorderDistance": 0,
         "DistrictName": "string",
         "HasFamilyDoctorInRoutine": "כן",
         "HasNurseInRoutine": "כן",
@@ -41,7 +40,7 @@
         "HasChildrenDoctorNow": "כן",
         "HasGynecologistNow": "כן",
         "Location": {
-           "x": 31.8011152,
+            "x": 31.8011152,
             "y": 35.2368616
         }
     },
@@ -49,7 +48,7 @@
         "NumAVi": 860,
         "Emer_Dept_hmo_GK": 2357966,
         "LastUpdateDate": "16/12/2019, 8:05",
-        "IsLastInput": "",
+        "IsLastInput": 0,
         "ClinicStatus": "פתוח",
         "CityCode": 2100,
         "CityName": "טירת כרמל",
@@ -66,8 +65,8 @@
         "ClinicCode": "",
         "HealthMedicalCenterName": "לאומית",
         "ClinicName": "",
-        "NorthernBorderDistance": "number",
-        "GazaBorderDistance": "number",
+        "NorthernBorderDistance": 0,
+        "GazaBorderDistance": 0,
         "DistrictName": "string",
         "HasFamilyDoctorInRoutine": "כן",
         "HasNurseInRoutine": "כן",
@@ -86,7 +85,7 @@
         "HasChildrenDoctorNow": "כן",
         "HasGynecologistNow": "כן",
         "Location": {
-           "x": 32.7596281,
+            "x": 32.7596281,
             "y": 34.9707694
         }
     },
@@ -94,7 +93,7 @@
         "NumAVi": 1379,
         "Emer_Dept_hmo_GK": 2360435,
         "LastUpdateDate": "16/12/2019, 8:05",
-        "IsLastInput": "",
+        "IsLastInput": 0,
         "ClinicStatus": "סגור",
         "CityCode": 874,
         "CityName": "מגדל העמק",
@@ -111,8 +110,8 @@
         "ClinicCode": "",
         "HealthMedicalCenterName": "כללית",
         "ClinicName": "",
-        "NorthernBorderDistance": "number",
-        "GazaBorderDistance": "number",
+        "NorthernBorderDistance": 0,
+        "GazaBorderDistance": 0,
         "DistrictName": "string",
         "HasFamilyDoctorInRoutine": "כן",
         "HasNurseInRoutine": "כן",
@@ -131,7 +130,7 @@
         "HasChildrenDoctorNow": "כן",
         "HasGynecologistNow": "כן",
         "Location": {
-           "x": 32.7004369,
+            "x": 32.7004369,
             "y": 35.2222586
         }
     },
@@ -139,7 +138,7 @@
         "NumAVi": 1424,
         "Emer_Dept_hmo_GK": 2359048,
         "LastUpdateDate": "16/12/2019, 8:05",
-        "IsLastInput": "",
+        "IsLastInput": 0,
         "ClinicStatus": "פתוח",
         "CityCode": 1200,
         "CityName": "מודיעין-מכבים-רעות",
@@ -156,8 +155,8 @@
         "ClinicCode": "",
         "HealthMedicalCenterName": "מכבי",
         "ClinicName": "",
-        "NorthernBorderDistance": "number",
-        "GazaBorderDistance": "number",
+        "NorthernBorderDistance": 0,
+        "GazaBorderDistance": 0,
         "DistrictName": "string",
         "HasFamilyDoctorInRoutine": "כן",
         "HasNurseInRoutine": "כן",
@@ -176,9 +175,9 @@
         "HasChildrenDoctorNow": "כן",
         "HasGynecologistNow": "כן",
         "Location": {
-           "x": 31.9054595,
+            "x": 31.9054595,
             "y": 35.0053972
         }
     }
-  ]
-}
+]
+

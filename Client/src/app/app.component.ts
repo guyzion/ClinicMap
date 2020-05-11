@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { tileLayer, latLng, circle, polygon, marker, icon, layerGroup, Map } from 'leaflet';
 import 'leaflet/dist/images/marker-shadow.png';
 import 'leaflet/dist/images/marker-icon.png';
+import { ClinicsService } from './clinics.service';
 
 @Component({
   selector: 'app-root',
@@ -11,32 +12,10 @@ import 'leaflet/dist/images/marker-icon.png';
 export class AppComponent {
   title = 'Client';
 
+  constructor(private clinicsService: ClinicsService){}
+
   overlayGroup = layerGroup();
 
-  allOverlays = [
-    marker([32, 35], {
-      icon: icon({
-         iconSize: [50, 56],
-         iconAnchor: [25, 56],
-         iconUrl: 'assets/leumit-open.png',
-      })
-    }),
-    marker([32, 34.8], {
-      icon: icon({
-         iconSize: [50, 56],
-         iconAnchor: [25, 56],
-         iconUrl: 'assets/klalit-closed.png',
-      })
-    }),
-    marker([31.8, 35], {
-      icon: icon({
-         iconSize: [ 50, 56 ],
-         iconAnchor: [25, 56],
-         iconUrl: 'assets/meuhedet-open.png',
-      })
-    }),
-  ]
-  
   options = {
     layers: [
       tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '...' }), 
@@ -48,14 +27,23 @@ export class AppComponent {
 
   layersControl = {
     overlays: {
-      'Clinics': this.overlayGroup,
+      'כל המרפאות': this.overlayGroup,
     }
   }
 
   onMapReady(map: Map){
-    this.allOverlays.forEach(overlay => {
-      overlay.bindPopup("<b>קופת חולים כללית</b><br>פתוחים");
-      overlay.addTo(this.overlayGroup)
+    let clinics = this.clinicsService.getClinics();
+    console.log(clinics);
+    clinics.forEach(clinic =>{
+      marker([clinic.Location.x, clinic.Location.y], {
+        icon: icon({
+           iconSize: [50, 56],
+           iconAnchor: [25, 56],
+           iconUrl: 'assets/'+clinic.HealthMedicalCenterName+'-'+clinic.ClinicStatus+'.png',
+           popupAnchor: [0, -40]
+        })
+      }).bindPopup(`<div style='font-size: 14px; text-align: center;'><h1> קופת חולים ${clinic.HealthMedicalCenterName} </h1> ${clinic.CityName}, ${clinic.StreetName} <div>`).addTo(this.overlayGroup);
+
     });
   }
 }
