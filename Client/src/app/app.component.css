@@ -1,3 +1,24 @@
-.leaflet-popup-content{
-    color: blueviolet;
+.leaflet-container{
+    height: 1200px;
+}
+
+::ng-deep .leaflet-popup-content{
+    text-align: right;
+}
+
+::ng-deep .leaflet-popup-content .header{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+::ng-deep .leaflet-popup-content .address{
+    font-size: 14px;
+}
+
+::ng-deep .leaflet-popup-content .policy{
+    font-size: 16px;
+}
+
+::ng-deep .leaflet-control-layers-base{
+    font-size: 20px;
 }
